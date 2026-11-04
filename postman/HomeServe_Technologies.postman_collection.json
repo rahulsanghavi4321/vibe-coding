@@ -1,0 +1,142 @@
+{
+  "info": {
+    "name": "HomeServe Technologies SaaS API",
+    "_postman_id": "71d9e815-homeserve-postman-collection",
+    "description": "Complete REST API collection for HomeServe Technologies SaaS Platform across Customer, Service Provider, Technician, and Super Admin roles.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Authentication",
+      "item": [
+        {
+          "name": "Login - Super Admin",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@homeservetech.com\",\n  \"password\": \"Password@123\"\n}"
+            },
+            "url": {"raw": "{{base_url}}/api/v1/auth/login", "host": ["{{base_url}}"], "path": ["api", "v1", "auth", "login"]}
+          }
+        },
+        {
+          "name": "Login - Customer",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"customer@gmail.com\",\n  \"password\": \"Password@123\"\n}"
+            },
+            "url": {"raw": "{{base_url}}/api/v1/auth/login", "host": ["{{base_url}}"], "path": ["api", "v1", "auth", "login"]}
+          }
+        },
+        {
+          "name": "Get Profile (/auth/me)",
+          "request": {
+            "method": "GET",
+            "header": [{"key": "Authorization", "value": "Bearer {{access_token}}"}],
+            "url": {"raw": "{{base_url}}/api/v1/auth/me", "host": ["{{base_url}}"], "path": ["api", "v1", "auth", "me"]}
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Categories & Catalog",
+      "item": [
+        {
+          "name": "List Categories",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "{{base_url}}/api/v1/categories", "host": ["{{base_url}}"], "path": ["api", "v1", "categories"]}
+          }
+        },
+        {
+          "name": "List Services",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "{{base_url}}/api/v1/services", "host": ["{{base_url}}"], "path": ["api", "v1", "services"]}
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Bookings Workflow",
+      "item": [
+        {
+          "name": "Create Booking",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"},
+              {"key": "Authorization", "value": "Bearer {{access_token}}"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"provider_id\": 1,\n  \"service_id\": 1,\n  \"booking_date\": \"2026-11-06\",\n  \"time_slot\": \"10:00 AM - 11:00 AM\",\n  \"problem_description\": \"Ceiling fan repair\",\n  \"base_price\": 299.0,\n  \"tax_amount\": 53.82,\n  \"discount_amount\": 0.0,\n  \"total_amount\": 352.82\n}"
+            },
+            "url": {"raw": "{{base_url}}/api/v1/bookings", "host": ["{{base_url}}"], "path": ["api", "v1", "bookings"]}
+          }
+        },
+        {
+          "name": "Customer My Bookings",
+          "request": {
+            "method": "GET",
+            "header": [{"key": "Authorization", "value": "Bearer {{access_token}}"}],
+            "url": {"raw": "{{base_url}}/api/v1/bookings/customer/my-bookings", "host": ["{{base_url}}"], "path": ["api", "v1", "bookings", "customer", "my-bookings"]}
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Payments & Settlements",
+      "item": [
+        {
+          "name": "Create Payment Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"},
+              {"key": "Authorization", "value": "Bearer {{access_token}}"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"booking_id\": 1,\n  \"amount\": 352.82\n}"
+            },
+            "url": {"raw": "{{base_url}}/api/v1/payments/create-order", "host": ["{{base_url}}"], "path": ["api", "v1", "payments", "create-order"]}
+          }
+        },
+        {
+          "name": "Verify / Simulate Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"},
+              {"key": "Authorization", "value": "Bearer {{access_token}}"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"booking_id\": 1,\n  \"order_id\": \"order_test_123\",\n  \"payment_id\": \"pay_test_123\",\n  \"signature\": \"simulated_valid_signature_2026\",\n  \"payment_method\": \"upi\"\n}"
+            },
+            "url": {"raw": "{{base_url}}/api/v1/payments/verify", "host": ["{{base_url}}"], "path": ["api", "v1", "payments", "verify"]}
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Analytics",
+      "item": [
+        {
+          "name": "Admin Overview Analytics",
+          "request": {
+            "method": "GET",
+            "header": [{"key": "Authorization", "value": "Bearer {{access_token}}"}],
+            "url": {"raw": "{{base_url}}/api/v1/analytics/admin/overview", "host": ["{{base_url}}"], "path": ["api", "v1", "analytics", "admin", "overview"]}
+          }
+        }
+      ]
+    }
+  ]
+}

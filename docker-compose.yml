@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: homeserve_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: homeserve_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: homeserve_backend
+    restart: always
+    environment:
+      DATABASE_URL: mysql+pymysql://root:root@db:3306/homeserve_db?charset=utf8
+      SECRET_KEY: enterprise_secure_jwt_secret_key_minimum_32_characters_2026
+      PAYMENT_MODE: simulation
+      MEDIA_STORAGE_DRIVER: local
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: homeserve_frontend
+    restart: always
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
