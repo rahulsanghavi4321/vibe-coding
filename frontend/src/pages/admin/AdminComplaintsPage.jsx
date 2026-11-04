@@ -235,3 +235,4 @@ export const AdminComplaintsPage = () => {
 };
 
 export default AdminComplaintsPage;
+

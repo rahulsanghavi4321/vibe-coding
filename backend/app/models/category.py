@@ -68,3 +68,4 @@ class ProviderService(Base):
 
     provider = relationship("ServiceProvider", back_populates="provider_services")
     service = relationship("Service", back_populates="provider_services")
+

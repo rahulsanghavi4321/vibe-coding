@@ -107,3 +107,4 @@ class AdminAnnouncement(Base):
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
     created_by = Column(Integer, ForeignKey("users.id"), nullable=True)
+

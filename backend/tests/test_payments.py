@@ -37,3 +37,4 @@ def test_commission_calculation_formula():
 
     assert calculated_commission == expected_commission
     assert calculated_net == expected_provider_net
+

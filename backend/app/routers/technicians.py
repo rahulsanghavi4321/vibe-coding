@@ -158,3 +158,4 @@ def update_job_status(
     db.refresh(booking)
 
     return {"id": booking.id, "status": booking.status, "updated_at": booking.updated_at}
+

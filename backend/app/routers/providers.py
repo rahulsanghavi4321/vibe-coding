@@ -57,3 +57,4 @@ def get_my_provider_overview(
         "rating_count": provider.rating_count,
         "technicians_count": len(provider.technicians) if provider.technicians else 0,
     }
+

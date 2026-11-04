@@ -145,3 +145,4 @@ graph TD
 ### 4.4 Usability & Accessibility
 - **NFR-USE-01**: Frontend responsive design must function seamlessly across desktop ($>1024\text{px}$), tablet ($768\text{px} - 1024\text{px}$), and mobile ($<768\text{px}$) viewports.
 - **NFR-USE-02**: Interactive forms must provide real-time client-side validation and clear error states.
+

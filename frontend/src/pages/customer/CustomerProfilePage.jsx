@@ -178,3 +178,4 @@ export const CustomerProfilePage = () => {
 };
 
 export default CustomerProfilePage;
+

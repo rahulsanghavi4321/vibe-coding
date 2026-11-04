@@ -379,3 +379,4 @@ export const ProviderBookingsPage = () => {
 };
 
 export default ProviderBookingsPage;
+

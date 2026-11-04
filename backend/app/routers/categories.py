@@ -39,3 +39,4 @@ def toggle_category_status(category_id: int, db: Session = Depends(get_db), user
     cat.is_active = not cat.is_active
     db.commit()
     return {"id": cat.id, "is_active": cat.is_active}
+

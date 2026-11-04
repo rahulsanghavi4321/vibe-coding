@@ -23,3 +23,4 @@ def test_get_services_catalog(client):
     assert len(filtered_services) > 0
     for s in filtered_services:
         assert s["category_slug"] == "electrical-services"
+

@@ -373,3 +373,4 @@ export const CustomerBookingsPage = () => {
 };
 
 export default CustomerBookingsPage;
+

@@ -84,3 +84,4 @@ class Technician(Base):
     user = relationship("User", back_populates="technician_profile")
     provider = relationship("ServiceProvider", back_populates="technicians")
     assignments = relationship("BookingAssignment", back_populates="technician")
+

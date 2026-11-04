@@ -79,3 +79,4 @@ def health_check():
         "database": "connected",
         "environment": settings.APP_ENV
     }
+

@@ -211,3 +211,4 @@ export const PaymentModal = ({ isOpen, onClose, booking, onPaymentSuccess }) => 
 };
 
 export default PaymentModal;
+

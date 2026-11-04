@@ -145,3 +145,4 @@ c:\vibe-code\
         ├── e2e_booking_journey.spec.js   # Full 18-step customer-provider-tech-admin flow
         └── negative_scenarios.spec.js    # Invalid auth, collision, unauthorized routes
 ```
+

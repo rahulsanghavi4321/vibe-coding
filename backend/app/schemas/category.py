@@ -44,3 +44,4 @@ class ServiceResponse(BaseModel):
 
     class Config:
         from_attributes = True
+

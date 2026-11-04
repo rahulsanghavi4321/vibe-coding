@@ -52,3 +52,4 @@ def toggle_user_account(
     user.status = request.status
     db.commit()
     return {"id": user.id, "email": user.email, "status": user.status}
+

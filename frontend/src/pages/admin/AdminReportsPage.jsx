@@ -116,3 +116,4 @@ export const AdminReportsPage = () => {
 };
 
 export default AdminReportsPage;
+

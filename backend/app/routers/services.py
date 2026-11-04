@@ -58,3 +58,4 @@ def get_popular_services(db: Session = Depends(get_db)):
             "category_name": s.subcategory.category.name if s.subcategory and s.subcategory.category else "Home Service",
         })
     return results
+

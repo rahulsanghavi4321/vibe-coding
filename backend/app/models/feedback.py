@@ -55,3 +55,4 @@ class ComplaintHistory(Base):
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
     complaint = relationship("Complaint", back_populates="history")
+

@@ -90,3 +90,4 @@ class BookingStatusHistory(Base):
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
     booking = relationship("Booking", back_populates="status_history")
+

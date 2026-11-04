@@ -19,3 +19,4 @@ services:
         value: simulation
       - key: MEDIA_STORAGE_DRIVER
         value: local
+

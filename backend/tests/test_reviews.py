@@ -15,3 +15,4 @@ def test_review_submission(client, customer_headers):
         assert r.json()["rating"] == 5
     else:
         assert "already been submitted" in r.json()["detail"]
+

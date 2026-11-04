@@ -462,3 +462,4 @@ erDiagram
 - `is_active` (BOOLEAN, Default: TRUE)
 - `created_at` (DATETIME)
 - `created_by` (INT, FK -> users.id)
+

@@ -85,3 +85,4 @@ The platform defines four discrete primary roles:
    - If a provider attempts to approve another provider's booking: `403 Forbidden: Unauthorized Provider Access`.
 3. **Admin Escalation**:
    - Super admin users bypass owner filtering for read/audit purposes, but all admin actions are logged with administrative user IDs.
+

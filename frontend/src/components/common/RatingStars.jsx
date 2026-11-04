@@ -37,3 +37,4 @@ export const RatingStars = ({ rating = 5, totalStars = 5, size = 'md', interacti
 };
 
 export default RatingStars;
+

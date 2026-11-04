@@ -45,3 +45,4 @@ def get_admin_overview(
         "pending_verifications": pending_verifications,
         "open_complaints": open_complaints,
     }
+

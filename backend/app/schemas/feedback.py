@@ -14,3 +14,4 @@ class ComplaintCreateRequest(BaseModel):
 class ComplaintStatusUpdateRequest(BaseModel):
     status: str
     resolution_remarks: Optional[str] = None
+

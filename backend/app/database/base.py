@@ -16,3 +16,4 @@ from app.models.operational import (
     AdminAnnouncement,
     Favourite
 )
+

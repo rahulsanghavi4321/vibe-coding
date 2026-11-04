@@ -41,3 +41,4 @@ def test_customer_registration(client):
     data = response.json()
     assert data["user"]["email"] == rand_email
     assert data["user"]["role"] == "customer"
+

@@ -234,3 +234,4 @@ export const AdminCategoriesPage = () => {
 };
 
 export default AdminCategoriesPage;
+

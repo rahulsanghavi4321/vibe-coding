@@ -34,3 +34,4 @@ def technician_headers(client):
     assert r.status_code == 200
     token = r.json()["access_token"]
     return {"Authorization": f"Bearer {token}"}
+

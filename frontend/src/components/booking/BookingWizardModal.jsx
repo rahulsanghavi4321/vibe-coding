@@ -507,3 +507,4 @@ export const BookingWizardModal = ({ isOpen, onClose, initialService, onBookingS
 };
 
 export default BookingWizardModal;
+

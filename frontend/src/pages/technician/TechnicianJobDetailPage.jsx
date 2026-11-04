@@ -158,3 +158,4 @@ export const TechnicianJobDetailPage = () => {
 };
 
 export default TechnicianJobDetailPage;
+

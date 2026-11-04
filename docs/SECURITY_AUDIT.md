@@ -55,3 +55,4 @@
 
 - **CORS**: Cross-Origin Resource Sharing policy configured to explicit allowed development and production origins.
 - **Static Media Uploads**: File uploads restricted by size and allowed extensions (`.jpg`, `.png`, `.pdf`). Files served from dedicated `/static/uploads` with execution disabled.
+

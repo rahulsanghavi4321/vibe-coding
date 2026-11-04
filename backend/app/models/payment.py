@@ -68,3 +68,4 @@ class ProviderEarning(Base):
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
     provider = relationship("ServiceProvider", back_populates="earnings")
+

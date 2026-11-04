@@ -109,3 +109,4 @@ export const ProviderEarningsPage = () => {
 };
 
 export default ProviderEarningsPage;
+

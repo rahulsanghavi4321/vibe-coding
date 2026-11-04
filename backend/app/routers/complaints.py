@@ -106,3 +106,4 @@ def update_complaint_status(
     db.commit()
 
     return {"id": complaint.id, "status": complaint.status, "message": "Dispute status updated."}
+

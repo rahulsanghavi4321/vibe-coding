@@ -59,3 +59,4 @@ def get_invoice_detail(
         "total_amount": inv.total_amount,
         "created_at": str(inv.created_at),
     }
+

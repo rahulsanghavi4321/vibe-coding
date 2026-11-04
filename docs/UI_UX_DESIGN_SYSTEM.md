@@ -87,3 +87,4 @@ Card with top-line gradient, large metric numeral, trend indicator, and Lucide i
   - Fixed 260px left sidebar with nested navigation groups.
   - Multi-column data layouts, responsive tables with sticky headers.
   - Interactive Recharts charts (AreaChart, BarChart, PieChart).
+

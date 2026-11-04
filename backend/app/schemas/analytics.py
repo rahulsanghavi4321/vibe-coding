@@ -26,3 +26,4 @@ class ProviderMetricsResponse(BaseModel):
     rating_avg: float
     rating_count: int
     technicians_count: int
+

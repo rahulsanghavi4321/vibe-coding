@@ -83,3 +83,4 @@ def test_prevent_past_date_booking(client, customer_headers):
     )
     assert res.status_code == 400
     assert "cannot be in the past" in res.json()["detail"]
+

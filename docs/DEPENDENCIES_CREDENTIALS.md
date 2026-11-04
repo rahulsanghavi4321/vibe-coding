@@ -80,3 +80,4 @@ In accordance with strict enterprise standards, **no secret keys are hardcoded**
 | **Razorpay Payments** | `RAZORPAY_KEY_ID`<br/>`RAZORPAY_KEY_SECRET` | Real-time payment processing & test cards | **Simulation Mode (`PAYMENT_MODE=simulation`)**: Emulates Razorpay order creation, mock checkout modal, HMAC signature verification, and automated invoice triggering without requiring live bank credentials. |
 | **Media Storage** | `CLOUDINARY_CLOUD_NAME`<br/>`CLOUDINARY_API_KEY`<br/>`CLOUDINARY_API_SECRET` | Cloud asset CDN | **Local Storage Driver (`MEDIA_STORAGE_DRIVER=local`)**: Automatically stores uploads in `backend/uploads/` and serves via FastAPI static files `/static/uploads/`. |
 | **SMTP Mailer** | `SMTP_HOST`<br/>`SMTP_USER`<br/>`SMTP_PASSWORD` | External email notices | **In-App Notification Center**: Every event is stored in the database `notifications` table and delivered to the frontend notification bell counter. |
+

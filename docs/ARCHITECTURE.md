@@ -184,3 +184,4 @@ The platform implements multi-tiered defense-in-depth:
   - `require_role(["customer"])`
 - **Ownership Verification**: Endpoints enforce tenant isolation (e.g., customers cannot read other customers' bookings, providers cannot see competing providers' revenues).
 - **Audit Trails**: Every lifecycle change creates timestamped records in `booking_status_history` and `complaint_history`.
+

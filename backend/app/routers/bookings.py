@@ -360,3 +360,4 @@ def cancel_booking(
     db.commit()
 
     return {"id": booking.id, "status": "Cancelled", "message": "Booking cancelled successfully."}
+
