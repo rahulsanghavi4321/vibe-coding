@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
-import { Wrench, Lock, Mail, AlertCircle, ArrowRight, ShieldCheck, UserCheck, Briefcase } from 'lucide-react';
+import { Wrench, Lock, Mail, AlertCircle, ArrowRight, ShieldCheck, UserCheck, Briefcase, Users } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
 export const LoginPage = () => {
