@@ -36,7 +36,7 @@ flowchart TD
    - **Publish directory**: `dist` (or `frontend/dist`)
 5. Configure Environment Variables in Netlify (**Site configuration** -> **Environment variables**):
    ```env
-   VITE_API_URL = https://<your-render-backend-name>.onrender.com/api/v1
+   VITE_API_URL = https://homeserve-backend-ylqa.onrender.com/api/v1
    ```
 6. Click **"Deploy site"**. Netlify automatically uses `frontend/netlify.toml` and `frontend/public/_redirects` to ensure seamless SPA client-side routing across all dashboard routes without 404 errors.
 
