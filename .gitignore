@@ -1,0 +1,52 @@
+# Environments & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Node & Frontend
+node_modules/
+.npm
+frontend/dist/
+frontend/build/
+.pnpm-debug.log*
+
+# Database & Storage
+*.sqlite3
+*.db
+local_storage/
+uploads/
+media/
+
+# Playwright & Testing
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+.DS_Store
