@@ -13,8 +13,8 @@
 |---|---|---|---|
 | **Phase 1** | Requirement Analysis, Architecture, SRS & Design System | 🟢 COMPLETED | Complete SRS, Architecture, ER diagram (27 tables), RBAC matrix, and UI/UX design system documented |
 | **Phase 2** | UI/UX & Frontend Development | 🟢 COMPLETED | React 18 + Vite + Tailwind CSS scaffolded, 4 role dashboards built, multi-step booking wizard, payment simulator, zero build errors |
-| **Phase 3** | Database Architecture & Migrations | 🟡 IN PROGRESS | Building 27 SQLAlchemy 2.0 models, relations, reset_db script, and baseline seed data |
-| **Phase 4** | Backend API & Business Logic | ⚪ NOT STARTED | FastAPI modular routers, auth, booking engine, payment simulation |
+| **Phase 3** | Database Architecture & Migrations | 🟢 COMPLETED | 27 tables created in MySQL `homeserve_db`, normalized relations, foreign keys, cascades, baseline seeder executed |
+| **Phase 4** | Backend API & Business Logic | 🟡 IN PROGRESS | Building FastAPI modular routers, JWT auth, booking concurrency engine, payment simulation |
 | **Phase 5** | Frontend-Backend Integration | ⚪ NOT STARTED | Axios client, state sync, protected routes, dynamic dashboards |
 | **Phase 6** | Testing & Quality Assurance | ⚪ NOT STARTED | Pytest, Postman collection, Playwright E2E test suite |
 | **Phase 7** | Security Audit & Hardening | ⚪ NOT STARTED | JWT, RBAC, input sanitization, signature checks, rate limiting |
