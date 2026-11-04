@@ -2,9 +2,11 @@ import datetime
 import uuid
 
 def test_booking_workflow_lifecycle(client, customer_headers, provider_headers, technician_headers):
-    # 1. Create booking
-    booking_date = str(datetime.date.today() + datetime.timedelta(days=2))
-    time_slot = "11:00 AM - 12:00 PM"
+    # 1. Create booking with unique future date to avoid slot collisions
+    import random
+    random_days = random.randint(15, 60)
+    booking_date = str(datetime.date.today() + datetime.timedelta(days=random_days))
+    time_slot = f"{random.randint(1, 9)}:00 PM - {random.randint(1, 9) + 1}:00 PM"
 
     res = client.post(
         "/api/v1/bookings",

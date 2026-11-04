@@ -9,11 +9,14 @@ Base = declarative_base()
 
 try:
     connect_args = {}
-    if "mysql" in settings.DATABASE_URL:
+    db_url = settings.DATABASE_URL
+    if db_url.startswith("postgres://"):
+        db_url = db_url.replace("postgres://", "postgresql://", 1)
+    elif "mysql" in db_url:
         connect_args["charset"] = "utf8"
     
     engine = create_engine(
-        settings.DATABASE_URL,
+        db_url,
         connect_args=connect_args,
         pool_pre_ping=True,
         pool_recycle=3600,
@@ -21,7 +24,7 @@ try:
     )
     # Test connection
     with engine.connect() as conn:
-        logger.info(f"Connected to MySQL primary database: {settings.DATABASE_URL.split('@')[-1] if '@' in settings.DATABASE_URL else 'local'}")
+        logger.info(f"Connected to primary database: {db_url.split('@')[-1] if '@' in db_url else 'local'}")
 except Exception as e:
     logger.warning(f"Primary database connection failed ({e}). Falling back to SQLite for local session...")
     FALLBACK_URL = "sqlite:///./homeserve.db"
