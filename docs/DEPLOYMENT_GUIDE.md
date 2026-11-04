@@ -24,21 +24,27 @@ flowchart TD
 
 ---
 
-## 2. Frontend Deployment on Vercel
+## 2. Frontend Deployment on Netlify (or Vercel)
 
-1. **Connect Repository**:
-   - Link the GitHub repository: `homeserve-technologies-saas`.
-   - Set **Root Directory**: `frontend`.
-2. **Build Settings**:
-   - Framework Preset: `Vite`.
-   - Build Command: `npm run build`.
-   - Output Directory: `dist`.
-3. **Environment Variables**:
+### Option A: Netlify (User Selected)
+1. Log in to [Netlify](https://app.netlify.com).
+2. Click **"Add new site"** -> **"Import an existing project"** -> **"GitHub"**.
+3. Select your repository: `rahulsanghavi4321/vibe-coding`.
+4. Configure Build settings:
+   - **Base directory**: `frontend`
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist` (or `frontend/dist`)
+5. Configure Environment Variables in Netlify (**Site configuration** -> **Environment variables**):
    ```env
-   VITE_API_URL=https://homeserve-api.onrender.com/api/v1
+   VITE_API_URL = https://<your-render-backend-name>.onrender.com/api/v1
    ```
-4. **Deploy**:
-   - Click **Deploy**. Vercel will build the production bundle and deploy to global edge CDNs. SPA rewrites are governed by `frontend/vercel.json`.
+6. Click **"Deploy site"**. Netlify automatically uses `frontend/netlify.toml` and `frontend/public/_redirects` to ensure seamless SPA client-side routing across all dashboard routes without 404 errors.
+
+### Option B: Vercel
+1. Link GitHub repository `rahulsanghavi4321/vibe-coding` on Vercel.
+2. Root Directory: `frontend`.
+3. Set `VITE_API_URL` to your Render API URL.
+4. Deploy using `frontend/vercel.json`.
 
 ---
 

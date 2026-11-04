@@ -40,6 +40,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Startup event to ensure database tables are created
+@app.on_event("startup")
+def startup_event():
+    try:
+        from app.database.connection import engine, Base
+        import app.database.base  # registers all 27 models
+        Base.metadata.create_all(bind=engine)
+    except Exception as e:
+        print(f"[Warning] Database auto-initialization on startup: {e}")
+
 # Ensure upload directory exists and mount static files
 os.makedirs("uploads", exist_ok=True)
 app.mount("/static/uploads", StaticFiles(directory="uploads"), name="uploads")
