@@ -157,7 +157,7 @@ export const DashboardLayout = ({ children, title = 'Dashboard' }) => {
         </nav>
 
         {/* Sidebar Footer */}
-        <div className="p-3 border-t border-slate-800">
+        <div className="p-3 border-t border-slate-800 space-y-2">
           <button
             onClick={logout}
             className="w-full flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 transition-colors"
@@ -165,6 +165,11 @@ export const DashboardLayout = ({ children, title = 'Dashboard' }) => {
             <LogOut className="w-4 h-4" />
             <span>Sign Out</span>
           </button>
+          <div className="px-2 py-1 text-center border-t border-slate-800/60 pt-2">
+            <span className="text-[10px] font-bold text-slate-400 tracking-wide">
+              Developed By Rahul Sanghavi
+            </span>
+          </div>
         </div>
       </aside>
 
@@ -252,6 +257,16 @@ export const DashboardLayout = ({ children, title = 'Dashboard' }) => {
         <main className="p-4 sm:p-6 lg:p-8 flex-1">
           {children}
         </main>
+
+        {/* Dashboard Footer */}
+        <footer className="px-6 py-4 border-t border-slate-200/80 bg-white text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-3 mt-auto shadow-sm">
+          <p>© {new Date().getFullYear()} HomeServe Technologies Inc. All rights reserved.</p>
+          <div className="flex items-center gap-2">
+            <span className="font-bold text-xs text-brand-700 bg-brand-50 border border-brand-200 px-3.5 py-1 rounded-full shadow-sm">
+              Developed By Rahul Sanghavi
+            </span>
+          </div>
+        </footer>
       </div>
 
     </div>

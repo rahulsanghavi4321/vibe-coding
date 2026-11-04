@@ -109,11 +109,14 @@ export const Footer = () => {
 
         </div>
 
-        {/* Copyright */}
+        {/* Copyright & Developer Credit */}
         <div className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>© {new Date().getFullYear()} HomeServe Technologies Inc. All rights reserved.</p>
+          <p className="font-bold text-sm text-brand-400 bg-brand-950/60 border border-brand-500/30 px-4 py-1.5 rounded-full shadow-inner">
+            Developed By Rahul Sanghavi
+          </p>
           <p className="flex items-center gap-1 text-[11px] text-slate-500">
-            Enterprise SaaS Platform · PCI-DSS Compliant Payment Flow · Razorpay Sandbox
+            Enterprise SaaS Platform · PCI-DSS Compliant Payment Flow
           </p>
         </div>
 

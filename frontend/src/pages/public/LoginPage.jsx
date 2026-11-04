@@ -197,6 +197,14 @@ export const LoginPage = () => {
         </div>
       </div>
 
+      {/* Footer Signature */}
+      <footer className="mt-auto py-6 text-center text-xs text-slate-500">
+        <p className="font-bold text-brand-600 bg-white inline-block px-4 py-1 rounded-full border border-slate-200 shadow-sm">
+          Developed By Rahul Sanghavi
+        </p>
+        <p className="text-[11px] text-slate-400 mt-1">HomeServe Technologies SaaS Platform</p>
+      </footer>
+
     </div>
   );
 };
