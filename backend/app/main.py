@@ -1,5 +1,6 @@
 import os
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from app.core.config import settings
@@ -73,13 +74,7 @@ app.include_router(admin.router, prefix=api_v1)
 
 @app.get("/")
 def root():
-    return {
-        "app": settings.APP_NAME,
-        "version": "1.0.0",
-        "status": "healthy",
-        "docs": "/docs",
-        "api": api_v1
-    }
+    return RedirectResponse(url="/docs")
 
 @app.get("/health")
 def health_check():
