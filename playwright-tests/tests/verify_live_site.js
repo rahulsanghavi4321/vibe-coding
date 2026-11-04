@@ -88,7 +88,7 @@ async function testAllPages() {
   await visit('/provider/bookings', 'Provider Bookings', 'text=Job Requests & Scheduling');
   await visit('/provider/technicians', 'Provider Technicians', 'text=Field Operations Team');
   await visit('/provider/earnings', 'Provider Earnings', 'text=Financial Settlements & Payouts');
-  await visit('/provider/availability', 'Provider Availability', 'text=Weekly Availability Schedule');
+  await visit('/provider/availability', 'Provider Availability', 'text=Working Days & Shifts');
 
   console.log('\n=== PART 4: TECHNICIAN ROLE & FIELD APP ===');
   await page.evaluate(() => localStorage.clear());
